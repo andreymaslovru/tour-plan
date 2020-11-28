@@ -1125,6 +1125,103 @@ template {
   max-width: 537px;
 }
 
+.activities {
+  padding: 60px 0 98px 0;
+}
+
+.activities__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 57px;
+}
+
+.activities-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 255px;
+  height: 255px;
+  padding: 24px 26px;
+  overflow: hidden;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.card__bg {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: -webkit-linear-gradient(270.17deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
+  background: -o-linear-gradient(270.17deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
+  background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
+}
+
+.card__title {
+  margin-top: auto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-bottom: 18px;
+  z-index: 0;
+}
+
+.card__button {
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: none;
+  background-color: #EC1F46;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 7px 22px;
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -1140,6 +1237,10 @@ template {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .card {
+    width: 220px;
+    height: 220px;
   }
 }
 
@@ -1196,12 +1297,21 @@ template {
   .reviews-slider__item {
     max-width: 580px;
   }
+  .activities-wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .card {
+    width: 48%;
+    height: 255px;
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
-    width: 92%;
-    max-width: 576px;
+    max-width: 95%;
   }
   .navbar-menu, .navbar__search, .navbar__user {
     display: none;
@@ -1324,6 +1434,13 @@ template {
         -ms-transform: translate(50%, 0);
             transform: translate(50%, 0);
   }
+  .activities {
+    padding: 60px 0 70px 0;
+  }
+  .card {
+    width: 49%;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1344,5 +1461,24 @@ template {
   }
   .subscribe {
     width: 100%;
+  }
+  .activities {
+    padding: 40px 0 60px 0;
+  }
+  .activities-wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .activities__title {
+    margin-bottom: 36px;
+  }
+  .card {
+    width: 280px;
+    height: 255px;
   }
 }
